@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIRAI — Immersive Technology Studio</title>
+    <meta name="description"
+        content="MIRAI builds immersive experiences through AR/VR/XR, AI agents, computer vision, and next-gen campaigns. Enter the system.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230F0816'/><text x='4' y='24' font-size='24' fill='%23E6119D'>M</text></svg>">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r132/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/DRACOLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/postprocessing/Pass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/postprocessing/EffectComposer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/postprocessing/RenderPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/shaders/LuminosityHighPassShader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/shaders/CopyShader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/shaders/SMAAShader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/postprocessing/ShaderPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/postprocessing/SMAAPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/postprocessing/TexturePass.js"></script>
+    <script src="AlphaUnrealBloomPass.js"></script>
+    <script src="hero-3d.js"></script>
+</head>
+
+<body>
+
+    <!-- ═══ HERO ═══ -->
+    <section id="hero">
+        <div id="hero-3d-container"></div>
+        <div class="hero-grid-bg"></div>
+        <div class="hero-glow"></div>
+        <div class="container">
+            <div class="hero-status">
+                <span class="status-dot"></span>
+                SYS.ONLINE // V1.0.0 // IMMERSIVE_TECH_STUDIO
+            </div>
+            <div class="hero-logo-container">
+                <img src="assets/IMG_20260209_221933.png" alt="MIRAI Logo" class="hero-symbol">
+                <h1 class="hero-logo">MiRAi</h1>
+            </div>
+            <p class="hero-tagline">— The Future, Engineered</p>
+            <p class="hero-description">
+                We architect immersive realities. AR/VR worlds, autonomous AI agents,
+                and computer vision systems — built to push the boundary of what's possible.
+            </p>
+            <a href="#cta" class="pixel-btn" id="hero-cta">[ INIT CONTACT ]</a>
+        </div>
+    </section>
+
+    <main>
+
+        <!-- ═══ CAPABILITIES ═══ -->
+        <section id="capabilities">
+            <div class="container">
+                <div class="section-label">System Modules</div>
+                <h2 class="section-title">CAPABILITIES_</h2>
+
+                <div class="capabilities-grid">
+                    <!-- Card 1: AR/VR/XR -->
+                    <div class="system-window reveal" data-accent="primary">
+                        <div class="window-header">
+                            <div class="window-dots">
+                                <span class="window-dot window-dot--active"></span>
+                                <span class="window-dot"></span>
+                                <span class="window-dot"></span>
+                            </div>
+                            <span class="window-title">module_xr.sys</span>
+                        </div>
+                        <div class="window-body">
+                            <img src="assets/ar_service.png" alt="AR/VR/XR Service Icon" class="service-image">
+                            <div class="service-text">
+                                <h3>AR / VR / XR</h3>
+                                <p>Spatial computing experiences that blur the line between digital and physical.
+                                    Real-time rendering, 6DOF tracking, and immersive world-building.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: AI Agents -->
+                    <div class="system-window reveal" data-accent="purple">
+                        <div class="window-header">
+                            <div class="window-dots">
+                                <span class="window-dot window-dot--active"></span>
+                                <span class="window-dot"></span>
+                                <span class="window-dot"></span>
+                            </div>
+                            <span class="window-title">module_ai.sys</span>
+                        </div>
+                        <div class="window-body">
+                            <img src="assets/ai_service.png" alt="AI Agents Service Icon" class="service-image">
+                            <div class="service-text">
+                                <h3>AI Agents</h3>
+                                <p>Autonomous systems that reason, plan, and execute. Multi-agent architectures,
+                                    LLM orchestration, and decision pipelines for real-world deployment.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Computer Vision & ML -->
+                    <div class="system-window reveal" data-accent="violet">
+                        <div class="window-header">
+                            <div class="window-dots">
+                                <span class="window-dot window-dot--active"></span>
+                                <span class="window-dot"></span>
+                                <span class="window-dot"></span>
+                            </div>
+                            <span class="window-title">module_cv.sys</span>
+                        </div>
+                        <div class="window-body">
+                            <img src="assets/cv_service.png" alt="Computer Vision Service Icon" class="service-image">
+                            <div class="service-text">
+                                <h3>Computer Vision & ML</h3>
+                                <p>Perception systems that see, interpret, and learn. Object detection,
+                                    segmentation, pose estimation — trained on custom data for precision tasks.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Immersive Campaigns -->
+                    <div class="system-window reveal" data-accent="pink">
+                        <div class="window-header">
+                            <div class="window-dots">
+                                <span class="window-dot window-dot--active"></span>
+                                <span class="window-dot"></span>
+                                <span class="window-dot"></span>
+                            </div>
+                            <span class="window-title">module_campaign.sys</span>
+                        </div>
+                        <div class="window-body">
+                            <img src="assets/immersive_service.png" alt="Immersive Campaigns Service Icon"
+                                class="service-image">
+                            <div class="service-text">
+                                <h3>Immersive Campaigns</h3>
+                                <p>Next-gen brand experiences bridging physical and digital. Interactive installations,
+                                    WebAR activations, and data-driven experiential marketing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ PROCESS ═══ -->
+        <section id="process">
+            <div class="container">
+                <div class="section-label">Execution Pipeline</div>
+                <h2 class="section-title">PROCESS_</h2>
+
+                <div class="terminal-container reveal">
+                    <div class="terminal-header">
+                        <div class="window-dots">
+                            <span class="window-dot window-dot--active"></span>
+                            <span class="window-dot"></span>
+                            <span class="window-dot"></span>
+                        </div>
+                        <span class="terminal-header-title">mirai_pipeline.sh</span>
+                    </div>
+                    <div class="terminal-body" id="terminal-body">
+                        <div class="terminal-line" data-step="1">
+                            <span class="line-number">01</span>
+                            <span class="line-prefix">$</span>
+                            <span class="line-command">INITIALIZE</span>
+                            <span class="line-text">— Discovery, research, system architecture</span>
+                            <span class="line-status">[OK]</span>
+                        </div>
+                        <div class="terminal-line" data-step="2">
+                            <span class="line-number">02</span>
+                            <span class="line-prefix">$</span>
+                            <span class="line-command">SIMULATE</span>
+                            <span class="line-text">— Prototype, test environments, iterate</span>
+                            <span class="line-status">[OK]</span>
+                        </div>
+                        <div class="terminal-line" data-step="3">
+                            <span class="line-number">03</span>
+                            <span class="line-prefix">$</span>
+                            <span class="line-command">OPTIMIZE</span>
+                            <span class="line-text">— Performance tuning, edge-case resolution</span>
+                            <span class="line-status">[OK]</span>
+                        </div>
+                        <div class="terminal-line" data-step="4">
+                            <span class="line-number">04</span>
+                            <span class="line-prefix">$</span>
+                            <span class="line-command">DEPLOY</span>
+                            <span class="line-text">— Ship to production, monitor, evolve</span>
+                            <span class="line-status">[OK]</span>
+                        </div>
+                        <div class="terminal-line terminal-line--cursor" data-step="5">
+                            <span class="line-number">05</span>
+                            <span class="line-prefix">$</span>
+                            <span class="line-text">awaiting_input</span>
+                            <span class="terminal-cursor"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ SHOWCASE ═══ -->
+        <section id="showcase">
+            <div class="container">
+                <div class="section-label">Visual Output</div>
+                <h2 class="section-title">SHOWCASE_</h2>
+
+                <div class="showcase-grid">
+                    <!-- Frame 1: Pixel grid -->
+                    <div class="showcase-frame showcase-frame--grid reveal">
+                        <span class="showcase-frame-label">spatial_mapping.dat</span>
+                    </div>
+
+                    <!-- Frame 2: Concentric squares -->
+                    <div class="showcase-frame showcase-frame--squares reveal">
+                        <div class="concentric-square"></div>
+                        <div class="concentric-square"></div>
+                        <div class="concentric-square"></div>
+                        <div class="concentric-square"></div>
+                        <div class="concentric-square"></div>
+                        <span class="showcase-frame-label">depth_layers.dat</span>
+                    </div>
+
+                    <!-- Frame 3: Glitch bars -->
+                    <div class="showcase-frame showcase-frame--glitch reveal">
+                        <div class="glitch-bar"></div>
+                        <div class="glitch-bar"></div>
+                        <div class="glitch-bar"></div>
+                        <div class="glitch-bar"></div>
+                        <div class="glitch-bar"></div>
+                        <div class="glitch-bar"></div>
+                        <div class="glitch-bar"></div>
+                        <div class="glitch-bar"></div>
+                        <span class="showcase-frame-label">signal_noise.dat</span>
+                    </div>
+
+                    <!-- Frame 4: Data matrix -->
+                    <div class="showcase-frame showcase-frame--data reveal" id="data-matrix">
+                        <span class="showcase-frame-label">neural_map.dat</span>
+                    </div>
+
+                    <!-- Frame 5: Wireframe -->
+                    <div class="showcase-frame showcase-frame--wireframe reveal">
+                        <div class="wireframe-shape"></div>
+                        <span class="showcase-frame-label">geometry_sim.dat</span>
+                    </div>
+
+                    <!-- Frame 6: Progress bars -->
+                    <div class="showcase-frame showcase-frame--progress reveal">
+                        <div class="progress-row">
+                            <span class="progress-label">render_pipeline</span>
+                            <div class="progress-track">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                        <div class="progress-row">
+                            <span class="progress-label">neural_inference</span>
+                            <div class="progress-track">
+                                <div class="progress-fill progress-fill--purple"></div>
+                            </div>
+                        </div>
+                        <div class="progress-row">
+                            <span class="progress-label">world_state_sync</span>
+                            <div class="progress-track">
+                                <div class="progress-fill progress-fill--violet"></div>
+                            </div>
+                        </div>
+                        <span class="showcase-frame-label">perf_monitor.dat</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ FINAL CTA ═══ -->
+        <section id="cta">
+            <div class="container">
+                <div class="cta-dialog reveal">
+                    <div class="cta-dialog-header">
+                        <div class="window-dots">
+                            <span class="window-dot window-dot--active"></span>
+                            <span class="window-dot"></span>
+                            <span class="window-dot"></span>
+                        </div>
+                        <span>system_prompt.exe</span>
+                    </div>
+                    <div class="cta-dialog-body">
+                        <h2>READY TO BUILD THE FUTURE?</h2>
+                        <p>Initialize a conversation with MIRAI. Whether you need immersive experiences,
+                            intelligent agents, or next-gen interfaces — we're ready to deploy.</p>
+                        <div class="cta-buttons">
+                            <a href="mailto:contact@mirai.studio" class="pixel-btn" id="cta-contact">[ CONTACT MIRAI
+                                ]</a>
+                            <a href="#" class="pixel-btn pixel-btn--secondary" id="cta-demo">[ REQUEST DEMO ]</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer>
+        <div class="container">
+            <p>© 2026 MIRAI — IMMERSIVE TECHNOLOGY STUDIO</p>
+            <p>SYS.STATUS: OPERATIONAL</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
