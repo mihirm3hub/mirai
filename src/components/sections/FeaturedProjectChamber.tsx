@@ -7,16 +7,25 @@ export default function FeaturedProjectChamber({ project }: { project: FeaturedP
 
   return (
     <article className="chamber flex min-h-[420px] w-[min(100%,1100px)] shrink-0 flex-col gap-8 border border-hairline bg-inkDeep/60 p-8 sm:flex-row">
-      <div className="flex flex-1 flex-col gap-6">
-        <span className={`font-mono text-sm ${accentClass}`}>{project.id}</span>
-        <h3 className="text-3xl font-medium text-white sm:text-4xl">{project.title}</h3>
-        <p className="text-sm text-white/65">{project.description}</p>
-        <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.3em] text-white/50">
-          {project.stack.map((item) => (
-            <span key={item} className="border border-hairline px-3 py-2">
-              {item}
-            </span>
-          ))}
+      <div className="flex flex-1 flex-col justify-between gap-8">
+        <div className="flex flex-col gap-4">
+          <span className={`font-mono text-sm ${accentClass}`}>{project.id}</span>
+          <h3 className="max-w-[12ch] text-3xl font-medium leading-[0.95] text-white sm:text-4xl">
+            {project.title}
+          </h3>
+        </div>
+        <div className="flex flex-col gap-5">
+          <p className="max-w-[30ch] text-base leading-7 text-white/65">{project.description}</p>
+          <div className="grid grid-cols-2 gap-3 text-sm uppercase tracking-[0.22em] text-white/70">
+            {project.stack.map((item) => (
+              <span
+                key={item}
+                className="flex min-h-14 items-center justify-center border border-hairline px-4 py-3 text-center"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
         <AnimatedLine className="w-full" />
       </div>

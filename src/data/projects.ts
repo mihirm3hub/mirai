@@ -9,7 +9,7 @@ export type FeaturedProject = {
 export const featuredProjects: FeaturedProject[] = [
   {
     id: "01",
-    title: "Marvel x JimJam WebAR",
+    title: "Marvel x JimJam",
     description: "Mobile WebAR system with on-device inference, spatial overlays, and adaptive interaction loops.",
     stack: ["WebXR", "ONNX", "Three.js", "Edge CV"],
     accent: "mirai"

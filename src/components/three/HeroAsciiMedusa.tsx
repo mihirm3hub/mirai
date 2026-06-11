@@ -127,7 +127,7 @@ export default function HeroAsciiMedusa() {
 
     const loader = new GLTFLoader();
     loader.load(
-      "/medusa.glb",
+      "/models/medusa.glb",
       (gltf) => {
         const geometry = mergeSceneGeometry(gltf.scene);
         if (!geometry) {
@@ -152,7 +152,7 @@ export default function HeroAsciiMedusa() {
       },
       undefined,
       (error) => {
-        console.error("Failed to load medusa.glb", error);
+        console.error("Failed to load /models/medusa.glb", error);
       },
     );
 

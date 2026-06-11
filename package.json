@@ -13,12 +13,15 @@
   "dependencies": {
     "@react-three/drei": "latest",
     "@react-three/fiber": "latest",
+    "clsx": "^2.1.1",
     "framer-motion": "latest",
     "gsap": "latest",
+    "lucide-react": "^1.17.0",
     "next": "latest",
     "posthog-js": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "tailwind-merge": "^3.6.0",
     "three": "latest"
   },
   "devDependencies": {

@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 
 export async function GET() {
-  const filePath = path.join(process.cwd(), "medusa.glb");
+  const filePath = path.join(process.cwd(), "public", "models", "medusa.glb");
   const data = await readFile(filePath);
 
   return new Response(data, {
