@@ -102,7 +102,7 @@ export default function ContactGridSection() {
                 Spatial interfaces, computer vision systems, embodied AI, and advanced product
                 prototypes for teams building ambitious interaction layers.
               </p>
-              <MagneticButton href="mailto:hello@mirai.studio" label="hello@mirai.studio" className="px-6 py-4" />
+              <MagneticButton href="mailto:mainkar.mihir@gmail.com" label="mainkar.mihir@gmail.com" className="px-6 py-4" />
             </div>
           </article>
 
@@ -133,7 +133,7 @@ export default function ContactGridSection() {
               <div className="contact-panel-links">
                 <a
                   className="contact-channel-link"
-                  href="https://github.com"
+                  href="https://github.com/mihirm3hub"
                   aria-label="GitHub"
                   target="_blank"
                   rel="noreferrer"
@@ -147,7 +147,7 @@ export default function ContactGridSection() {
                 </a>
                 <a
                   className="contact-channel-link"
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/mihir-mainkar/"
                   aria-label="LinkedIn"
                   target="_blank"
                   rel="noreferrer"
@@ -159,7 +159,7 @@ export default function ContactGridSection() {
                     />
                   </svg>
                 </a>
-                <a className="contact-channel-link" href="mailto:hello@mirai.studio" aria-label="Email">
+                <a className="contact-channel-link" href="mailto:mainkar.mihir@gmail.com" aria-label="Email">
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       fill="currentColor"

@@ -41,9 +41,9 @@ export default function ContactSection() {
           <span className="absolute left-0 top-0 h-full w-px bg-white/20" />
           <span className="absolute right-0 top-0 h-full w-px bg-white/20" />
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <MagneticButton href="mailto:hello@mirai.studio" label="Start a Project" className="px-6 py-4" />
-            <MagneticButton href="https://github.com" label="View GitHub" variant="ghost" className="px-6 py-4" />
-            <MagneticButton href="https://linkedin.com" label="LinkedIn" variant="ghost" className="px-6 py-4" />
+            <MagneticButton href="mailto:mainkar.mihir@gmail.com" label="Start a Project" className="px-6 py-4" />
+            <MagneticButton href="https://github.com/mihirm3hub" label="View GitHub" variant="ghost" className="px-6 py-4" />
+            <MagneticButton href="https://www.linkedin.com/in/mihir-mainkar/" label="LinkedIn" variant="ghost" className="px-6 py-4" />
           </div>
         </div>
       </div>
