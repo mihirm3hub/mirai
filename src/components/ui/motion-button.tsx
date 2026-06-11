@@ -11,22 +11,22 @@ function cn(...inputs: any[]) {
 
 interface Props {
   label: string
+  href?: string
   variant?: 'primary' | 'secondary'
   classes?: string
   animate?: boolean
   delay?: number
 }
 
-const MotionButton: FC<Props> = ({ label, classes, variant = 'primary' }) => {
-  return (
-    <button
-      type="button"
-      className={cn(
-        'motion-button',
-        variant === 'secondary' && 'motion-button-secondary',
-        classes
-      )}
-    >
+const MotionButton: FC<Props> = ({ label, href, classes, variant = 'primary' }) => {
+  const className = cn(
+    'motion-button',
+    variant === 'secondary' && 'motion-button-secondary',
+    classes
+  )
+
+  const content = (
+    <>
       <span
         className={cn(
           'motion-button-circle',
@@ -40,6 +40,20 @@ const MotionButton: FC<Props> = ({ label, classes, variant = 'primary' }) => {
       <span className="motion-button-text">
         {label}
       </span>
+    </>
+  )
+
+  if (href) {
+    return (
+      <a href={href} className={className}>
+        {content}
+      </a>
+    )
+  }
+
+  return (
+    <button type="button" className={className}>
+      {content}
     </button>
   )
 }

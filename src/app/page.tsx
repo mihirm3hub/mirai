@@ -24,13 +24,14 @@ export default function HomePage() {
         <div className="hero-label hero-label-about">
           <span>ABOUT</span>
         </div>
-        <div className="hero-about-copy">
+        <div id="about" className="hero-about-copy">
           MIRAI builds spatial systems across XR, computer vision, and embodied AI,
           turning sensing, interaction, and intelligence into usable products.
         </div>
         <div className="hero-top-links">
-          <span className="hero-label-toplink hero-hover-underline">WORK</span>
-          <span className="hero-label-toplink hero-hover-underline">CONTACT</span>
+          <a href="#work" className="hero-label-toplink hero-hover-underline">WORK</a>
+          <a href="#about" className="hero-label-toplink hero-hover-underline">ABOUT</a>
+          <a href="#contact" className="hero-label-toplink hero-hover-underline">CONTACT</a>
         </div>
         <div className="hero-marquee" aria-label="Bringing Vision to Reality">
           <div className="hero-marquee-track">
@@ -41,7 +42,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="hero-connect-slot">
-          <MotionButton label="Get Started" classes="w-full max-w-[14rem]" />
+          <MotionButton href="#contact" label="Get Started" classes="w-full max-w-[14rem]" />
         </div>
         <div className="hero-label hero-label-cv">
           <span>CV</span>
@@ -49,7 +50,7 @@ export default function HomePage() {
         <div className="hero-label hero-label-xr">
           <span>XR</span>
         </div>
-        <div className="hero-label hero-label-explore">
+        <a href="#work" className="hero-label hero-label-explore" aria-label="Explore featured projects">
           <svg
             className="hero-explore-ring"
             viewBox="0 0 200 200"
@@ -73,7 +74,7 @@ export default function HomePage() {
               </textPath>
             </text>
           </svg>
-        </div>
+        </a>
 
         <div className="hero-ascii-shell">
           <HeroAsciiMedusa />

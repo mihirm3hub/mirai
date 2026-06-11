@@ -153,7 +153,7 @@ export const InteractiveTravelCard = React.forwardRef<
                 {indexLabel ? (
                   <motion.span
                     style={{ transform: "translateZ(78px)" }}
-                    className="font-mono text-[0.68rem] tracking-[0.22em] text-white/70"
+                    className="featured-project-index text-[0.68rem] text-white/70"
                   >
                     {indexLabel}
                   </motion.span>

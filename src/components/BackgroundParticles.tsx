@@ -29,6 +29,17 @@ export default function BackgroundParticles() {
     const pointer = { x: 0, y: 0, active: false };
     let animationFrame = 0;
 
+    const getViewportSize = () => {
+      const viewport = window.visualViewport;
+      const width = viewport?.width ?? document.documentElement.clientWidth;
+      const height = viewport?.height ?? window.innerHeight;
+
+      return {
+        width: Math.floor(width),
+        height: Math.floor(height),
+      };
+    };
+
     const createParticles = (width: number, height: number) => {
       particles.length = 0;
       const count = Math.max(360, Math.floor((width * height) / 42000));
@@ -46,8 +57,7 @@ export default function BackgroundParticles() {
     };
 
     const resize = () => {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
+      const { width, height } = getViewportSize();
       const ratio = Math.min(window.devicePixelRatio || 1, 2);
 
       canvas.width = Math.floor(width * ratio);
@@ -60,8 +70,7 @@ export default function BackgroundParticles() {
     };
 
     const draw = () => {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
+      const { width, height } = getViewportSize();
 
       context.clearRect(0, 0, width, height);
 
@@ -112,12 +121,14 @@ export default function BackgroundParticles() {
     draw();
 
     window.addEventListener("resize", resize);
+    window.visualViewport?.addEventListener("resize", resize);
     // window.addEventListener("pointermove", handlePointerMove);
     window.addEventListener("pointerleave", handlePointerLeave);
 
     return () => {
       window.cancelAnimationFrame(animationFrame);
       window.removeEventListener("resize", resize);
+      window.visualViewport?.removeEventListener("resize", resize);
       // window.removeEventListener("pointermove", handlePointerMove);
       window.removeEventListener("pointerleave", handlePointerLeave);
     };
