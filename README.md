@@ -15,7 +15,7 @@ This repo keeps the original planning/document structure and replaces the Gatsby
 - Framer Motion
 - Tailwind CSS
 - MDX-ready content structure
-- Vercel deployment target
+- Netlify deployment target
 
 ## Structure
 
@@ -29,17 +29,18 @@ src/
   app/
     layout.tsx
     page.tsx
+    about/page.tsx
+    projects/page.tsx
     globals.css
   components/
-    Hero.tsx
-    ProjectShowcase.tsx
+    sections/
+    three/
+    ui/
   data/
+    profile.ts
     projects.ts
-  scenes/
-    SpatialHeroScene.tsx
-  shaders/
-    gradient.frag
 public/
+  fonts/
   images/
   models/
 ```
@@ -59,6 +60,27 @@ Open `http://localhost:3000`.
 npm run typecheck
 npm run build
 ```
+
+## Netlify Auto Deploy
+
+This repo now includes:
+
+- `netlify.toml` with the Netlify build command and Node 22 runtime
+- `.github/workflows/netlify-deploy.yml` to deploy automatically on every push to `main`
+
+### One-time setup
+
+1. Create or open the site in Netlify.
+2. In Netlify, copy the site ID from `Site configuration > General`.
+3. In Netlify, create a personal access token.
+4. In GitHub, add these repository secrets:
+   - `NETLIFY_AUTH_TOKEN`
+   - `NETLIFY_SITE_ID`
+5. Push changes to `main`.
+
+The workflow will install dependencies, run `npm run typecheck`, and then run a production Netlify deploy from GitHub Actions.
+
+If you want Netlify branch deploys or preview deploys as well, that should be done by linking the GitHub repo in the Netlify dashboard in addition to this production workflow.
 
 ## Notes
 
