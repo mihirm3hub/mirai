@@ -102,6 +102,28 @@ export const InteractiveTravelCard = React.forwardRef<
       mouseY.set(0);
     };
 
+    const isExternalHref = /^https?:\/\//.test(href);
+
+    const navigateToHref = React.useCallback(() => {
+      if (typeof window === "undefined") {
+        return;
+      }
+
+      if (isExternalHref) {
+        window.open(href, "_blank", "noopener,noreferrer");
+        return;
+      }
+
+      window.location.assign(href);
+    }, [href, isExternalHref]);
+
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        navigateToHref();
+      }
+    };
+
     return (
       <motion.div
         ref={(node) => {
@@ -115,6 +137,10 @@ export const InteractiveTravelCard = React.forwardRef<
         onMouseEnter={handleMouseEnter}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
+        onClick={navigateToHref}
+        onKeyDown={handleKeyDown}
+        role="link"
+        tabIndex={0}
         whileHover={{ scale: 1.01 }}
         style={{
           rotateX,
@@ -124,7 +150,7 @@ export const InteractiveTravelCard = React.forwardRef<
           willChange: "transform",
         }}
         className={cn(
-          "relative h-full min-h-[21.5rem] w-full transform-gpu rounded-[15px] bg-[#1f1f1d] shadow-[0_20px_45px_rgba(0,0,0,0.38)]",
+          "relative h-full min-h-[21.5rem] w-full transform-gpu rounded-[15px] bg-[#1f1f1d] shadow-[0_20px_45px_rgba(0,0,0,0.38)] cursor-pointer",
           className
         )}
       >
@@ -176,8 +202,9 @@ export const InteractiveTravelCard = React.forwardRef<
 
               <motion.a
                 href={href}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={isExternalHref ? "_blank" : undefined}
+                rel={isExternalHref ? "noopener noreferrer" : undefined}
+                onClick={(event) => event.stopPropagation()}
                 whileHover={{ scale: 1.1, rotate: "2.5deg" }}
                 whileTap={{ scale: 0.9 }}
                 aria-label={`Learn more about ${title}`}

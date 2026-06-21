@@ -21,16 +21,16 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="hero-label hero-label-about">
+        <a href="/about" className="hero-label hero-label-about">
           <span>ABOUT</span>
-        </div>
-        <div id="about" className="hero-about-copy">
+        </a>
+        <div className="hero-about-copy">
           MIRAI builds spatial systems across XR, computer vision, and embodied AI,
           turning sensing, interaction, and intelligence into usable products.
         </div>
         <div className="hero-top-links">
           <a href="#work" className="hero-label-toplink hero-hover-underline">WORK</a>
-          <a href="#about" className="hero-label-toplink hero-hover-underline">ABOUT</a>
+          <a href="/about" className="hero-label-toplink hero-hover-underline">ABOUT</a>
           <a href="#contact" className="hero-label-toplink hero-hover-underline">CONTACT</a>
         </div>
         <div className="hero-marquee" aria-label="Bringing Vision to Reality">
@@ -44,9 +44,9 @@ export default function HomePage() {
         <div className="hero-connect-slot">
           <MotionButton href="#contact" label="Get Started" classes="w-full max-w-[14rem]" />
         </div>
-        <div className="hero-label hero-label-cv">
+        <a href="/about" className="hero-label hero-label-cv">
           <span>CV</span>
-        </div>
+        </a>
         <div className="hero-label hero-label-xr">
           <span>XR</span>
         </div>

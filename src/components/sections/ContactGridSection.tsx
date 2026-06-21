@@ -167,6 +167,14 @@ export default function ContactGridSection() {
                     />
                   </svg>
                 </a>
+                <a className="contact-channel-link" href="/about#cv" aria-label="CV">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M7.75 3h6.19c.46 0 .9.184 1.225.51l4.325 4.325c.326.325.51.766.51 1.225v10.19A1.75 1.75 0 0 1 18.25 21h-10.5A1.75 1.75 0 0 1 6 19.25V4.75A1.75 1.75 0 0 1 7.75 3Zm0 1.5a.25.25 0 0 0-.25.25v14.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25V9.5h-3.25A1.75 1.75 0 0 1 13.5 7.75V4.5H7.75Zm7.25 1.06v2.19c0 .138.112.25.25.25h2.19L15 5.56ZM9.25 12A.75.75 0 0 1 10 11.25h6a.75.75 0 0 1 0 1.5h-6a.75.75 0 0 1-.75-.75Zm0 3.5A.75.75 0 0 1 10 14.75h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75Z"
+                    />
+                  </svg>
+                </a>
               </div>
             </div>
           </article>

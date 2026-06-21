@@ -11,17 +11,17 @@ const projectMedia: Record<string, { imageUrl: string; href: string }> = {
   "01": {
     imageUrl:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2069&auto=format&fit=crop",
-    href: "https://en.wikipedia.org/wiki/Augmented_reality",
+    href: "/projects#project-marvel-x-jimjam",
   },
   "02": {
     imageUrl:
       "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2070&auto=format&fit=crop",
-    href: "https://en.wikipedia.org/wiki/Point_cloud",
+    href: "/projects#project-nbv-bench",
   },
   "03": {
     imageUrl:
       "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop",
-    href: "https://en.wikipedia.org/wiki/Intelligent_agent",
+    href: "/projects#project-agentcorp",
   },
 };
 

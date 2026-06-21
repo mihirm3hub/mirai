@@ -1,0 +1,30 @@
+Mihir Mainkar
+Spatial Systems Engineer and Product Builder
+
+Focus Areas
+- XR product systems
+- Computer vision workflows
+- Multi-agent operations
+- Embodied AI simulation
+- Realtime 3D interfaces
+
+Profile
+I build product experiences where XR, computer vision, embodied systems, and applied AI meet real user workflows. My work spans immersive interaction design, spatial storytelling, technical prototyping, and product systems for complex interfaces.
+
+Selected Project Themes
+- Mobile WebAR systems with on-device inference
+- Research tooling for next-best-view planning and 3D vision
+- Multi-agent observability, policy, and operations interfaces
+- Spatial storytelling prototypes for enterprise technology
+- Simulation environments for physical AI validation
+
+Technical Toolkit
+- TypeScript, React, Next.js, Three.js
+- Python, C++, experiment tooling
+- WebXR, headset-native interaction, realtime rendering
+- Telemetry, orchestration, system design
+
+Contact
+Email: mainkar.mihir@gmail.com
+GitHub: https://github.com/mihirm3hub
+LinkedIn: https://www.linkedin.com/in/mihir-mainkar/
